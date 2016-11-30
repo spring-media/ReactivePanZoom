@@ -1,0 +1,10 @@
+{
+  "non-interactive": true,
+  "buildCommand": "npm run build",
+  "github": {
+    "release": false
+  },
+  "npm": {
+    "publish": true
+  }
+}
