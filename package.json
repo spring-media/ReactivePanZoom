@@ -2,7 +2,7 @@
   "name": "reactive-panzoom",
   "version": "0.2.0",
   "description": "A reactive implementation of panZoom mechanism",
-  "main": "src/ReactivePanZoom.js",
+  "main": "dist/ReactivePanZoom.min.js",
   "scripts": {
     "start": "webpack-dev-server --port 8070",
     "build": "BABEL_ENV=production webpack -p",
