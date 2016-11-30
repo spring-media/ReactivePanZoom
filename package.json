@@ -1,0 +1,91 @@
+{
+  "name": "reactive-panzoom",
+  "version": "0.2.0",
+  "description": "A reactive implementation of panZoom mechanism",
+  "main": "src/ReactivePanZoom.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 8070",
+    "build": "BABEL_ENV=production webpack -p",
+    "test": "npm run lint && npm run coverage",
+    "test-dev": "ava --watch",
+    "lint": "eslint src/*.js",
+    "coverage": "nyc ava",
+    "coverage-html-report": "nyc report --reporter=html",
+    "release": "release-it"
+  },
+  "files": [
+    "dist/ReactivePanZoom.min.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeltN24/ReactivePanZoom.git"
+  },
+  "keywords": [
+    "reactive",
+    "panzoom",
+    "kefir"
+  ],
+  "author": "WeltN24 Dev",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-syntax-flow": "^6.13.0",
+    "babel-plugin-tcomb": "^0.3.19",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-plugin-transform-flow-strip-types": "^6.14.0",
+    "babel-preset-es2015": "^6.16.0",
+    "browser-env": "^2.0.12",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.8.1",
+    "eslint-plugin-flowtype": "^2.23.0",
+    "eventemitter3": "^2.0.2",
+    "flow-type": "^1.0.1",
+    "gl-vec2": "^1.0.0",
+    "kefir": "^3.6.0",
+    "nyc": "^8.3.2",
+    "release-it": "^2.4.3",
+    "sinon": "^1.17.6",
+    "tcomb": "^3.2.15",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^0.14.1"
+  },
+  "ava": {
+    "files": [
+      "src/*.spec.js"
+    ],
+    "require": [
+      "babel-register",
+      "ava-browser-fixture"
+    ],
+    "babel": "inherit"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "syntax-flow",
+      "transform-flow-strip-types",
+      "transform-async-to-generator"
+    ],
+    "ignore": [],
+    "env": {
+      "development": {
+        "sourceMaps": "inline"
+      }
+    }
+  },
+  "nyc": {
+    "include": [
+      "src/ReactivePanZoom.js"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/WeltN24/ReactivePanZoom/issues"
+  },
+  "homepage": "https://github.com/WeltN24/ReactivePanZoom#readme"
+}

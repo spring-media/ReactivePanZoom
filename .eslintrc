@@ -1,0 +1,32 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": [
+    "flowtype"
+  ],
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "extends": [
+    "plugin:flowtype/recommended"
+  ],
+  "rules": {
+    "eol-last": 0,
+    //"no-underscore-dangle": 0,
+    "no-undef": 0,
+    "no-unused-vars": 0,
+    "no-shadow": 0,
+    "no-multi-spaces": 0,
+    "consistent-return": 0,
+    "no-use-before-define": 0,
+    "quotes": [2, "double"],
+    "comma-dangle": 1
+  }
+}

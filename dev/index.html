@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>reactive PanZoom Handler</title>
+    <script src="/ReactivePanZoom.dev.js"></script>
+</head>
+<style>
+    .container {
+        width: 100%;
+        height: 300px;
+        background-color: blue;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        background-color: green;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2r9//38gYGAEESAAEGAAasgJOgzOKCoAAAAASUVORK5CYII=);
+    }
+</style>
+<body>
+
+<h1>Demo</h1>
+
+<div id="c1" class="container" style="">
+    <div class="wrapper" style="width: 100%; height: 100%; ">
+        <img src="http://placehold.it/150" alt="" class="img"
+             style="margin-left:auto;margin-right:auto;width:150px;height:150px;display:block;padding-top: 75px;">
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>ZoomFactor</th><td id="zoomFactor"></td>
+    </tr>
+    <tr>
+        <th>x</th><td id="x"></td>
+    </tr>
+    <tr>
+        <th>y</th><td id="y"></td>
+    </tr>
+</table>
+
+<script>
+  (function () {
+
+    var rpz1 = new ReactivePanZoom.default(
+      document.querySelector("#c1 .wrapper"),
+      {
+        contentWidth: 150,
+        contentHeight: 150
+      }
+    );
+    // rpz1.sources.observe
+
+    var
+      zoomFactorElem = document.querySelector("#zoomFactor"),
+      xElem = document.querySelector("#x"),
+      yElem = document.querySelector("#y");
+
+    rpz1.zoomFactorProperty.debounce(50).observe((zoomFactor) => {
+      zoomFactorElem.innerHTML = zoomFactor;
+    });
+
+    rpz1.transformProperty.debounce(50).observe((transform) => {
+        xElem.innerHTML = transform[0];
+        yElem.innerHTML = transform[1];
+    });
+
+  })();
+</script>
+
+</body>
+</html>
