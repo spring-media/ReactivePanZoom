@@ -82,7 +82,7 @@
   },
   "nyc": {
     "include": [
-      "src/ReactivePanZoom.js"
+      "src/*.js"
     ]
   },
   "bugs": {
