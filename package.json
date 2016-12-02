@@ -1,6 +1,6 @@
 {
   "name": "reactive-panzoom",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A reactive implementation of panZoom mechanism",
   "main": "dist/ReactivePanZoom.min.js",
   "scripts": {

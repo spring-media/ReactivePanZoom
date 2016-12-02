@@ -30,7 +30,7 @@ if (TARGET == 'build') {
       // export itself to a global var
       libraryTarget: "umd",
       // name of the global var: "ContentSlider"
-      library: "ContentSlider"
+      library: "ReactivePanZoom"
     },
     plugins: [
       new webpack.DefinePlugin({
