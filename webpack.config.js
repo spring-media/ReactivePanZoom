@@ -17,40 +17,6 @@ function getBabelConf(plugins) {
 
 let base = {};
 
-//
-// const getBabelConf = function getBabelConf(plugins) {
-//   return {
-//           test: /\.js$/,
-//           exclude: /(node_modules|bower_components)/,
-//           loader: 'babel', // 'babel-loader' is also a valid name to reference
-//           query: {
-//             presets: ['es2015'],
-//             plugins: plugins
-//           }
-//         }
-// }
-//
-// let base = {
-//   module: {
-//     loaders: [
-//       {
-//         test: /\.js$/,
-//         exclude: /(node_modules|bower_components)/,
-//         loader: 'babel', // 'babel-loader' is also a valid name to reference
-//         query: {
-//           presets: ['es2015'],
-//           plugins: [
-//             "syntax-flow",
-//             "tcomb",
-//             "transform-flow-strip-types"
-//           ]
-//         }
-//       }
-//     ]
-//   }
-// };
-
-
 if (TARGET == 'build') {
   // Build the module bundle to the dist/ folder
   module.exports = merge(base, {
