@@ -30,7 +30,7 @@ export default class VectorMath {
     );
   }
 
-  static normalizeTransformOffset(elem: Vector, vecTransform, scaleFactor: number) {
+  static normalizeTransformOffset(elem: Vector, vecTransform: Vector, scaleFactor: number) {
     const [elemWidth, elemHeight] = elem;
 
     let scaledElemWidth = elemWidth * scaleFactor;

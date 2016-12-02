@@ -151,8 +151,7 @@ test("normalizeTransformOffset", t => {
 
   t.deepEqual(
     VectorMath.normalizeTransformOffset(
-      500,
-      500,
+      [500, 500],
       [200, 200],
       1
     ),
@@ -162,8 +161,7 @@ test("normalizeTransformOffset", t => {
 
   t.deepEqual(
     VectorMath.normalizeTransformOffset(
-      500,
-      500,
+      [500, 500],
       [-200, -200],
       1
     ),
@@ -173,8 +171,7 @@ test("normalizeTransformOffset", t => {
 
   t.deepEqual(
     VectorMath.normalizeTransformOffset(
-      500,
-      500,
+      [500, 500],
       [300, 300],
       2
     ),
@@ -184,8 +181,7 @@ test("normalizeTransformOffset", t => {
 
   t.deepEqual(
     VectorMath.normalizeTransformOffset(
-      500,
-      500,
+      [500, 500],
       [-300, -300],
       2
     ),
@@ -195,8 +191,7 @@ test("normalizeTransformOffset", t => {
 
   t.deepEqual(
     VectorMath.normalizeTransformOffset(
-      500,
-      500,
+      [500, 500],
       [100, 100],
       2
     ),
