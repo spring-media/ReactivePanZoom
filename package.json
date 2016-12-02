@@ -82,7 +82,8 @@
   },
   "nyc": {
     "include": [
-      "src/*.js"
+      "src/VectorMath.js",
+      "src/ReactivePanZoom.js"
     ]
   },
   "bugs": {
