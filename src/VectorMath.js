@@ -66,7 +66,7 @@ export default class VectorMath {
   static scale(v1, scale) {
     return [
       v1[0] * scale,
-      v1[1] * scale,
+      v1[1] * scale
     ];
   }
 

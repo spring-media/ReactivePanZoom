@@ -3,7 +3,7 @@
 import EventEmitter from "eventemitter3";
 import {PanZoomHandlerEvent} from "./types";
 import Kefir from "kefir";
-import V from './VectorMath';
+import V from "./VectorMath";
 import {Vector} from "./types";
 
 interface ReactivePanZoomOptions {

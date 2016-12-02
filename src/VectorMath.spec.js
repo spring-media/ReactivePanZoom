@@ -1,6 +1,6 @@
 // @tcomb
 
-import test from 'ava';
+import test from "ava";
 import VectorMath from "./VectorMath";
 
 test("divide", t => {
